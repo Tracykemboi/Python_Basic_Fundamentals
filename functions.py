@@ -3,13 +3,14 @@ def add_numbers(num1, num2):
     return num1 + num2
 
 def is_even(number):
+    # Check if a number is even using modulo operator
     if number % 2 == 0:
         return True
     else:
         return False
 
 def reverse_string(text):
-    # I learned this cool trick to reverse a string!
+    # Reverse a string using slice notation
     return text[::-1]
 
 def count_vowels(text):
@@ -21,14 +22,13 @@ def count_vowels(text):
     return count
 
 def calculate_factorial(n):
-    # Base case
+    # Recursive factorial calculation
     if n == 0 or n == 1:
         return 1
-    # Recursive case
     else:
         return n * calculate_factorial(n - 1)
 
-# I'm not sure if this is the best way to do a decorator
+# Decorator function
 def decorator_func(func):
     def wrapper(*args, **kwargs):
         print("Decorator Applied")
@@ -36,10 +36,11 @@ def decorator_func(func):
     return wrapper
 
 def apply_decorator(func):
+    # Apply the decorator_func to the given function
     return decorator_func(func)
 
 def sort_by_age(people):
-    # Sort people by age
+    # Sort list of (name, age) tuples by age
     return sorted(people, key=lambda x: x[1])
 
 def merge_dicts(dict1, dict2):
